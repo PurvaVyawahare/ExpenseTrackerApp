@@ -12,12 +12,26 @@ class Expense extends StatefulWidget {
 
 class _ExpenseState extends State<Expense> {
   final List<Expensemodel> _registeredExpense = [
-    Expensemodel(title: 'Restaurant', amount: 2.512, date: DateTime.now()),
-    Expensemodel(title: 'College Fees', amount: 1256.2, date: DateTime.now()),
+    Expensemodel(
+      title: 'Restaurant',
+      amount: 2.512,
+      date: DateTime.now(),
+      category: Category.food,
+    ),
+    Expensemodel(
+      title: 'College Fees',
+      amount: 1256.2,
+      date: DateTime.now(),
+      category: Category.work,
+    ),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Expense Tracker'),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
+      ),
       body: Column(
         children: [
           Text('This is our chart'),
