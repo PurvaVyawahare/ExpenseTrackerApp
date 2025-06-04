@@ -25,16 +25,32 @@ class _MainpageState extends State<Mainpage> {
       category: Category.food,
     ),
   ];
+
+  void openModal() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) {
+        return Text('This is modal sheet');
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text('Title'),
-        SizedBox(height: 20),
-        Text('Chart'),
-        SizedBox(height: 20),
-        Expense(expenses: _registeredExpense),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Expense Tracker'),
+        actions: [IconButton(onPressed: openModal, icon: Icon(Icons.add))],
+      ),
+      body: Column(
+        children: [
+          Text('Title'),
+          SizedBox(height: 20),
+          Text('Chart'),
+          SizedBox(height: 20),
+          Expense(expenses: _registeredExpense),
+        ],
+      ),
     );
   }
 }
