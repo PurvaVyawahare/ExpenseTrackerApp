@@ -1,6 +1,6 @@
 # 🎯 Flutter Expense Tracker
 
-![Expense Tracker Demo](Project Screenshots/Chart Screen.png)
+![Expense Tracker Demo](Project%20Screenshots/Chart%20Screen.png)
 
 A comprehensive expense management solution built with Flutter that helps users track their spending with beautiful visualizations.
 
