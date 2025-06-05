@@ -2,6 +2,7 @@ import 'package:expense_tracker/modelform.dart';
 import 'package:expense_tracker/models/expensemodel.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/expense.dart';
+import 'package:expense_tracker/chart.dart';
 
 class Mainpage extends StatefulWidget {
   const Mainpage({super.key});
@@ -83,7 +84,11 @@ class _MainpageState extends State<Mainpage> {
         actions: [IconButton(onPressed: openModal, icon: Icon(Icons.add))],
       ),
       body: Column(
-        children: [Text('Chart'), SizedBox(height: 20), mainContent],
+        children: [
+          Chart(expenses: _registeredExpense),
+          SizedBox(height: 20),
+          mainContent,
+        ],
       ),
     );
   }
